@@ -19,7 +19,7 @@ public class ApplicationTest {
     @Test
     public void testGetGreeting() {
         String greeting = application.getGreeting();
-        assertEquals("Hello from DevOps Lab!", greeting);
+        assertEquals("Hello from DevOps Lab - Updated!", greeting);
     }
     
     @Test
@@ -32,5 +32,11 @@ public class ApplicationTest {
     public void testAddNumbersWithNegatives() {
         int result = application.addNumbers(-5, 3);
         assertEquals(-2, result);
+    }
+    
+    @Test
+    public void testGetVersion() {
+        String version = application.getVersion();
+        assertEquals("1.1", version);
     }
 }

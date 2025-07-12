@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * Main Application class for DevOps Lab Exercise
+ * Updated for CI/CD demonstration
  */
 public class Application {
     
@@ -13,6 +14,7 @@ public class Application {
         app.displayWelcomeMessage();
         app.displayCurrentTime();
         app.displaySystemInfo();
+        app.displayBuildInfo();
     }
     
     /**
@@ -21,8 +23,10 @@ public class Application {
     public void displayWelcomeMessage() {
         System.out.println("=================================");
         System.out.println("  DevOps Lab Exercise - CI/CD");
+        System.out.println("  Updated Version 1.1");
         System.out.println("=================================");
         System.out.println("Welcome to Continuous Integration Demo!");
+        System.out.println("This build was triggered automatically!");
     }
     
     /**
@@ -40,7 +44,17 @@ public class Application {
     public void displaySystemInfo() {
         System.out.println("Java Version: " + System.getProperty("java.version"));
         System.out.println("Operating System: " + System.getProperty("os.name"));
+        System.out.println("User: " + System.getProperty("user.name"));
         System.out.println("Build Status: SUCCESS");
+    }
+    
+    /**
+     * Display build information
+     */
+    public void displayBuildInfo() {
+        System.out.println("Build Tool: Maven");
+        System.out.println("CI/CD Tool: Jenkins");
+        System.out.println("Version Control: Git");
         System.out.println("=================================");
     }
     
@@ -48,7 +62,7 @@ public class Application {
      * Method to get greeting message (for testing)
      */
     public String getGreeting() {
-        return "Hello from DevOps Lab!";
+        return "Hello from DevOps Lab - Updated!";
     }
     
     /**
@@ -56,5 +70,12 @@ public class Application {
      */
     public int addNumbers(int a, int b) {
         return a + b;
+    }
+    
+    /**
+     * Method to get version (for testing)
+     */
+    public String getVersion() {
+        return "1.1";
     }
 }
